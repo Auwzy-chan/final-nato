@@ -1,0 +1,36 @@
+{
+  "demoUser": {
+    "id": 1,
+    "fullName": "Demo User",
+    "email": "demo@autohub.demo",
+    "phone": "+1234567890",
+    "passwordHash": "sha256:examplehash"
+  },
+  "auth": {
+    "method": "sha256",
+    "minPasswordLength": 6
+  },
+  "vehicles": [
+    {
+      "id": 101,
+      "make": "Tesla",
+      "model": "Model S",
+      "year": 2022,
+      "price": 79999,
+      "availability": true
+    },
+    {
+      "id": 102,
+      "make": "BMW",
+      "model": "M3",
+      "year": 2021,
+      "price": 67999,
+      "availability": false
+    }
+  ],
+  "stats": {
+    "vehicles": 500,
+    "rating": 4.9,
+    "experienceYears": 15
+  }
+}

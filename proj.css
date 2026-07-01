@@ -1,0 +1,545 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* --- Left Hero Section --- */
+.hero-side {
+    flex: 1;
+    position: relative;
+    background: linear-gradient(rgba(11, 15, 25, 0.6), rgba(11, 15, 25, 0.85)), 
+                url('https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&q=80&w=1200') no-repeat center center;
+    background-size: cover;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    background-color: #ff9f05;
+    padding: 8px;
+    border-radius: 8px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text {
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-main {
+    max-width: 500px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.tagline {
+    color: #ff9f05;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tagline::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    background-color: #ff9f05;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-title span {
+    color: #ff9f05;
+}
+
+.hero-desc {
+    color: #a0aec0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.stats-row {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.stat-box h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff9f05;
+}
+
+.stat-box p {
+    color: #718096;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+/* --- Right Form Section --- */
+.form-side {
+    width: 50%;
+    background-color: #0b111e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.form-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-header p {
+    color: #718096;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+/* Tab Switcher */
+.tab-container {
+    display: flex;
+    background-color: #161c2a;
+    border-radius: 8px;
+    padding: 4px;
+    margin-bottom: 30px;
+    border: 1px solid #222d45;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #718096;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    background-color: #ff9f05;
+    color: #0b111e;
+}
+
+/* Input Styles */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #a0aec0;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    background-color: #111827;
+    border: 1px solid #222d45;
+    border-radius: 8px;
+    padding: 14px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #ff9f05;
+}
+
+.input-group input::placeholder {
+    color: #4a5568;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    background-color: #ff9f05;
+    color: #0b111e;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #e08b04;
+}
+
+.demo-text {
+    text-align: center;
+    color: #4a5568;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+/* Bottom Help Trigger */
+.help-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1e293b;
+    color: #a0aec0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.alert {
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    background-color: #1e293b;
+    border-left: 4px solid #ff9f05;
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 900px) {
+    .hero-side {
+        display: none;
+    }
+    .form-side {
+        width: 100%;
+    }
+}
+
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+
+/*Create account form styling*/
+.left-panel {
+    flex: 1;
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1617814076367-b759c7d7e738?q=80&w=1200') no-repeat center center/cover; /* Replace with your specific car image path */
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Dark cinematic overlay for the background image */
+.left-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(11, 15, 25, 0.6) 0%, rgba(11, 15, 25, 0.9) 100%);
+    z-index: 1;
+}
+
+.left-panel > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Logo */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    background-color: #ff9f05;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.logo-text {
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Hero Typography */
+.hero-content {
+    max-width: 450px;
+    margin-top: auto;
+    margin-bottom: 40px;
+}
+
+.badge {
+    color: #ff9f05;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.badge::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 2px;
+    background-color: #ff9f05;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #ff9f05;
+}
+
+.hero-content p {
+    color: #a0aec0;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Stats */
+.stats-container {
+    display: flex;
+    gap: 40px;
+}
+
+.stat-item h3 {
+    font-size: 24px;
+    color: #ff9f05;
+    font-weight: 700;
+}
+
+.stat-item p {
+    color: #718096;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* --- Right Panel (Form) Styling --- */
+.right-panel {
+    width: 50%;
+    background-color: #0b111e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 440px;
+}
+
+.right-panel h2 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: #718096;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Sign In / Create Account Navigation Toggle */
+.toggle-container {
+    display: flex;
+    background-color: #141b2d;
+    padding: 4px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.toggle-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #718096;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: #ff9f05;
+    color: #000000;
+}
+
+/* Form Inputs */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: #718096;
+    font-size: 12px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    background-color: #141b2d;
+    border: 1px solid #1f293d;
+    border-radius: 8px;
+    padding: 14px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #ff9f05;
+}
+
+.input-group input::placeholder {
+    color: #3e4d68;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    background-color: #ff9f05;
+    color: #000000;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e08b04;
+}
+
+/* Bottom Right ? Button */
+.help-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 32px;
+    height: 32px;
+    background-color: #141b2d;
+    color: #718096;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    .left-panel {
+        display: none; /* Hide hero on small screens */
+    }
+    .right-panel {
+        width: 100%;
+        height: 100vh;
+    }
+}
